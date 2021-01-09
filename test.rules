@@ -1,4 +1,4 @@
-# HTTP
+# For HTTP
 alert tcp any any -> any 80 (msg:"naver.com access"; content:"GET /"; content:"Host: "; content:"naver.com"; sid:10001; rev:1;)
 alert tcp any any -> any 80 (msg:"google.com access"; content:"GET /"; content:"Host: "; content:"google.com"; sid:10002; rev:1;)
 alert tcp any any -> any 80 (msg:"nate.com access"; content:"GET /"; content:"Host: "; content:"nate.com"; sid:10003; rev:1;)
@@ -20,7 +20,7 @@ alert tcp any any -> any 80 (msg:"youtube.com access"; content:"GET /"; content:
 alert tcp any any -> any 80 (msg:"jandi.com access"; content:"GET /"; content:"Host: "; content:"jandi.com"; sid:10019; rev:1;)
 alert tcp any any -> any 80 (msg:"paypal.com access"; content:"GET /"; content:"Host: "; content:"paypal.com"; sid:10020; rev:1;)
 
-# tls(HTTPS)
+# For HTTPS
 alert tls any any -> any 443 (msg:"naver.com access"; flow:established, to_server; content: "naver.com"; sid:10021; rev:1;)
 alert tls any any -> any 443 (msg:"wikipedia.org access"; flow:established, to_server; content: "wikipedia.org"; sid:10022; rev:1;)
 alert tls any any -> any 443 (msg:"github.com access"; flow:established, to_server; content: "github.com"; sid:10023; rev:1;)
